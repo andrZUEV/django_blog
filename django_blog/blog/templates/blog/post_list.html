@@ -6,7 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <H1>Текст размером H1</H1>
+    <div>
+        <H1>Текст размером H1</H1>
+    </div>
+    
+    <div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}      
+    </div>
+    
     
 </body>
 </html>
